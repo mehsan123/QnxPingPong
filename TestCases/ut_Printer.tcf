@@ -1,0 +1,125 @@
+
+    # Begin Properties
+
+      IBox = White
+      Protection Override = FALSE
+      SH Terminate Main = FALSE
+      SH Substitute Unused Source Files = TRUE
+
+    # End Properties
+
+    # Begin Attributes
+
+      Sequence Name = ut_Printer
+      Language Code = 2
+
+    # End Attributes
+
+    # Begin Test Case
+
+      File = .\Printer.c
+      Procedure = printerInit
+      Procedure Number = 1
+
+        # Begin Variable
+
+          Name = semPrinter
+          Decl_type = sem_t
+          Usage = G
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPrinter
+          Decl_type = sem_t
+          Usage = H
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+    # End Test Case
+
+    # Begin Test Case
+
+      File = .\Printer.c
+      Procedure = print
+      Procedure Number = 2
+
+        # Begin Variable
+
+          Name = aMsg
+          Decl_type = LDRA_char_pt
+          Usage = Z
+          Value = "hello"
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPrinter
+          Decl_type = sem_t
+          Usage = G
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPrinter
+          Decl_type = sem_t
+          Usage = H
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = stdout
+          Decl_type = stdio
+          Usage = D
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+    # End Test Case
+
+    # Begin Test Case
+
+      File = .\Printer.c
+      Procedure = printerCleanup
+      Procedure Number = 3
+
+        # Begin Variable
+
+          Name = semPrinter
+          Decl_type = sem_t
+          Usage = G
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPrinter
+          Decl_type = sem_t
+          Usage = H
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+    # End Test Case
+
+# Begin Selected Files from Set
+
+  .\Printer.c
+
+# End Selected Files from Set
+
+# Begin White Files
+
+  .\Printer.c
+
+# End White Files
+

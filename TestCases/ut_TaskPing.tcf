@@ -1,0 +1,353 @@
+
+    # Begin Properties
+
+      IBox = White
+      Protection Override = FALSE
+      SH Terminate Main = FALSE
+      SH Substitute Unused Source Files = TRUE
+
+    # End Properties
+
+    # Begin Attributes
+
+      Sequence Name = ut_TaskPing
+      Language Code = 2
+
+    # End Attributes
+
+    # Begin Test Case
+
+      File = .\TaskPing.c
+      Procedure = taskPingInit
+      Procedure Number = 1
+
+        # Begin Variable
+
+          Name = semPing
+          Decl_type = sem_t
+          Usage = G
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPing
+          Decl_type = sem_t
+          Usage = H
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+    # End Test Case
+
+    # Begin Test Case
+
+      File = .\TaskPing.c
+      Procedure = taskPingSignal
+      Procedure Number = 3
+
+        # Begin Variable
+
+          Name = semPing
+          Decl_type = sem_t
+          Usage = G
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPing
+          Decl_type = sem_t
+          Usage = H
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+    # End Test Case
+
+    # Begin Test Case
+
+      File = .\TaskPing.c
+      Procedure = taskPingRun
+      Procedure Number = 4
+      Setjmp = T
+
+        # Begin Variable
+
+          Name = arg
+          Decl_type = void*
+          Usage = Z
+          Value = (void*)(0)
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPing
+          Decl_type = sem_t
+          Usage = G
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = arg
+          Decl_type = void*
+          Usage = O
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = %
+          Decl_type = void *
+          Usage = O
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPing
+          Decl_type = sem_t
+          Usage = H
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+      # Begin TC Stub
+
+        Procedure = taskPongSignal
+        Terminate Count = 4
+  Overloading = Prototype
+
+  # Begin Overloading
+  # End Overloading
+
+      # End TC Stub
+
+    # End Test Case
+
+    # Begin Test Case
+
+      File = .\TaskPing.c
+      Procedure = taskPingCleanup
+      Procedure Number = 2
+
+        # Begin Variable
+
+          Name = semPing
+          Decl_type = sem_t
+          Usage = G
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPing
+          Decl_type = sem_t
+          Usage = H
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+    # End Test Case
+
+    # Begin Test Case
+
+      File = .\TaskPing.c
+      Procedure = taskPingRun
+      Procedure Number = 4
+      Setjmp = T
+
+        # Begin Variable
+
+          Name = arg
+          Decl_type = void*
+          Usage = Z
+          Value = (void*)(0)
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPing
+          Decl_type = sem_t
+          Usage = G
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = arg
+          Decl_type = void*
+          Usage = O
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = %
+          Decl_type = void *
+          Usage = O
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+        # Begin Variable
+
+          Name = semPing
+          Decl_type = sem_t
+          Usage = H
+          TBrun Analysis = Suspended
+
+        # End Variable
+
+      # Begin TC Stub
+
+        Procedure = taskPongSignal
+        Terminate Count = 4
+  Overloading = Prototype
+
+  # Begin Overloading
+  # End Overloading
+
+      # End TC Stub
+
+    # End Test Case
+
+# Begin Stub
+
+  Procedure = print
+  Method = Managed
+  Overloading = Prototype
+
+  # Begin Overloading
+const LDRA_char_pt
+  # End Overloading
+
+  # Begin MS Properties
+
+    # Begin Declarations
+
+    # End Declarations
+
+  # End MS Properties
+
+# End Stub
+
+# Begin Stub
+
+  Procedure = printerCleanup
+  Method = Managed
+  Overloading = Prototype
+
+  # Begin Overloading
+  # End Overloading
+
+  # Begin MS Properties
+
+    # Begin Declarations
+
+    # End Declarations
+
+  # End MS Properties
+
+# End Stub
+
+# Begin Stub
+
+  Procedure = printerInit
+  Method = Managed
+  Overloading = Prototype
+
+  # Begin Overloading
+  # End Overloading
+
+  # Begin MS Properties
+
+    # Begin Declarations
+
+    # End Declarations
+
+  # End MS Properties
+
+# End Stub
+
+# Begin Stub
+
+  Procedure = taskPongCleanup
+  Method = Managed
+  Overloading = Prototype
+
+  # Begin Overloading
+  # End Overloading
+
+  # Begin MS Properties
+
+    # Begin Declarations
+
+    # End Declarations
+
+  # End MS Properties
+
+# End Stub
+
+# Begin Stub
+
+  Procedure = taskPongRun
+  Method = Managed
+  Overloading = Prototype
+
+  # Begin Overloading
+void *
+  # End Overloading
+
+  # Begin MS Properties
+
+    # Begin Declarations
+
+    # End Declarations
+
+  # End MS Properties
+
+# End Stub
+
+# Begin Stub
+
+  Procedure = taskPongSignal
+  Method = Managed
+  Overloading = Prototype
+
+  # Begin Overloading
+  # End Overloading
+
+  # Begin MS Properties
+
+    # Begin Declarations
+
+    # End Declarations
+
+  # End MS Properties
+
+# End Stub
+
+# Begin Selected Files from Set
+
+  .\TaskPing.c
+
+# End Selected Files from Set
+
+# Begin White Files
+
+  .\TaskPing.c
+
+# End White Files
+
